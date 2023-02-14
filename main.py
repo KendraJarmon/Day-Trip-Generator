@@ -149,10 +149,29 @@ def validate_choice(Entertainment_options):
         if user_item == 0:
             valid_choice = True
             choice = 'Nothing Selected'
-        elif (user_item >= 3 and user_item <= len(Entertainment_options)):
-            choice = Entertainment_options[user_item-3]
+        elif (user_item >= 4 and user_item <= len(Entertainment_options)):
+            choice = Entertainment_options[user_item-4]
             valid_choice = True
         else:
             print('\nThat is not valid choice. Please try again.')
     print('Good choice!\n')
     return choice  
+
+Yes_choice = ['yes']
+No_choice = ['No']
+
+while True:
+    user_input = input('are you satisfied with your trip? (Yes/No): ')
+
+
+    if user_input.lower() in Yes_choice:
+      print('user typed Yes')
+      break
+    elif user_input.lower() in No_choice:
+      print('user typed No')
+      break
+    else:
+      print('Yes')
+
+
+
